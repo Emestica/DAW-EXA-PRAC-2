@@ -32,36 +32,48 @@
             </div>
         </div>
         <div class="card-footer">
-            <button class="btn btn-outline-primary">Guardar</button>
+            <div class="row">
+                <div class="col-md-12">
+                    <button id="btn_guardar_cliente" class="btn btn-primary" type="submit" style="float: right;">Guardar</button>
+                </div>
+            </div>
         </div>
     </form>
 </div>
 
 <hr>
-<div class="row">
-    <div class="col-md-12">
-        <div class="table-responsive-md">
-            <table class="table table-sm table-hover">
-                <thead class="thead-dark text-center">
-                    <tr>
-                       <th>#</th>
-                       <th>Nombre</th>
-                       <th>Apellido</th>
-                       <th>Fecha Nacimiento</th> 
-                    </tr>
-                </thead>
-                <tbody class="text-center">
-                    @foreach($listado as $objeto)
-                    <tr>
-                        <td>{{$objeto['id_cliente']}}</td>
-                        <td>{{$objeto['nombre']}}</td>
-                        <td>{{$objeto['apellido']}}</td>
-                        <td>{{$objeto['fecha_nacimiento']}}</td>
-                    </tr>
-                    @endforeach
-                </tbody>
-            </table>
+<div class="card">
+    <div class="card-header">
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="table-responsive-md">
+                    <table class="table table-sm table-hover">
+                        <thead class="thead-dark text-center">
+                            <tr>
+                            <th>#</th>
+                            <th>Nombre</th>
+                            <th>Apellido</th>
+                            <th>Fecha Nacimiento</th> 
+                            </tr>
+                        </thead>
+                        <tbody class="text-center">
+                            @foreach($listado as $objeto)
+                            <tr>
+                                <td>{{$objeto['id_cliente']}}</td>
+                                <td>{{$objeto['nombre']}}</td>
+                                <td>{{$objeto['apellido']}}</td>
+                                <td>{{$objeto['fecha_nacimiento']}}</td>
+                            </tr>
+                            @endforeach
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </div>
+    </div>
+    <div class="card-footer">
     </div>
 </div>
 @endsection
